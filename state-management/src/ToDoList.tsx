@@ -31,6 +31,7 @@ interface IForm {
 	email: string;
 	password: string;
 	password1: string;
+	extraError?: string;
 }
 
 function ToDoList() {
@@ -38,10 +39,14 @@ function ToDoList() {
 		register,
 		watch,
 		handleSubmit,
-		formState: { errors }
+		formState: { errors },
+		setError
 	} = useForm<IForm>({ defaultValues: { email: '@naver.com' } });
-	const onValid = (data: any) => {
-		console.log(data);
+	const onValid = (data: IForm) => {
+		if (data.password !== data.password1) {
+			setError('password1', { message: 'Password are not the same' }, { shouldFocus: true });
+		}
+		setError('extraError', { message: 'Server Offline.' });
 	};
 	console.log(errors);
 	return (
@@ -53,10 +58,12 @@ function ToDoList() {
 						minLength: {
 							value: 5,
 							message: 'Too Short'
-						}
+						},
+						validate: { noAlcol: (value) => (value.includes('alcohol') ? 'No Alcohol allowed' : true) }
 					})}
 					placeholder='Write to do'
 				/>
+				<span>{errors?.toDo?.message}</span>
 				<input
 					{...register('email', {
 						required: 'Email is required',
@@ -75,6 +82,7 @@ function ToDoList() {
 				/>
 				<span>{errors?.password1?.message}</span>
 				<button>Add</button>
+				<span>{errors?.extraError?.message}</span>
 			</form>
 		</div>
 	);
