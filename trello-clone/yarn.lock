@@ -7731,10 +7731,10 @@
     "react-fast-compare" "^3.1.1"
     "react-side-effect" "^2.1.0"
 
-"react-hook-form@^7.36.1":
-  "integrity" "sha512-EbYYkCG2p8ywe7ikOH2l02lAFMrrrslZi1I8fqd8ifDGNAkhomHZQzQsP6ksvzrWBKntRe8b5L5L7Zsd+Gm02Q=="
-  "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.36.1.tgz"
-  "version" "7.36.1"
+"react-hook-form@^7.38.0":
+  "integrity" "sha512-gxWW1kMeru9xR1GoR+Iw4hA+JBOM3SHfr4DWCUKY0xc7Vv1MLsF109oHtBeWl9shcyPFx67KHru44DheN0XY5A=="
+  "resolved" "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.38.0.tgz"
+  "version" "7.38.0"
 
 "react-is@^16.13.1":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
